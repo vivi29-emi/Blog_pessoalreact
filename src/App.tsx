@@ -1,10 +1,18 @@
 import React from 'react';
-import Home from './paginas/Home/Home';
+import Navbar from './components/estaticos/navbar/Navbar';
+import Footer from './components/estaticos/footer/Footer';
+import Home from'./paginas/Home/Home';
 import './App.css';
 
+
 function App() {
-  return (
-    <Home/ >
+  return(
+  <>
+  <Navbar/>
+  <Home/>
+  <Footer/>
+  </>
+
   );
 }
 
