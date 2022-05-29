@@ -7,6 +7,7 @@
 - [x] Alterando o Package.json.
 - [x] Alterando o arquivo Index.tsx.
 - [x] Atualizado as Dependências instaladas.
+- [x] Estilizada a camada Home para aprender o conceito do Material-Ui (Grids e flexbox).
 
 
 
