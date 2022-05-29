@@ -1,0 +1,14 @@
+.caixa{
+    background-color: #34dddb;
+}
+.cursor{
+    cursor:pointer;
+    color:white ;
+    
+}
+
+.text-decorator-none{
+    text-align: none;
+    text-decoration: none;
+    font-weight:bold;     
+}
