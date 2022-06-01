@@ -1,10 +1,10 @@
-.caixa{
-    background-color: #34dddb;
+.cor-menu{
+    background-image: url(https://i.imgur.com/N7EDhjF.jpg);
+    opacity: 0.8;
 }
 .cursor{
     cursor:pointer;
-    color:white ;
-    
+    color:white !important;   
 }
 
 .text-decorator-none{

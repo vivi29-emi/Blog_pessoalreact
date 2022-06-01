@@ -9,7 +9,7 @@ function Navbar (){
         <>
         {/* AppBar exibe os widgets da barra de ferramentas, levando , título e ações , acima da parte inferior */}
             
-            <AppBar position="static" className='caixa'>
+            <AppBar position="static" className='cor-menu'>
                 <Toolbar variant="dense" >
                     <Box className='cursor' >
                         {/* Typography é uma tag que recebe elementos textos */}

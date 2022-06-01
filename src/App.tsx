@@ -4,6 +4,7 @@ import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/Home/Home';
 import Login from './paginas/login/Login';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
 import './App.css';
 
 
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" element={<Login />} /> {/* faz o acesso a uma rota específica dentro da URL, nesse exemplo para o usuario acessar diretamente o login ou a tela de entrada do site*/}
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
+           <Route path="/cadastroUsuario" element={<CadastroUsuario/>}/>
         </Routes>
       </div>
       <Footer /> {/*Rodapé*/}

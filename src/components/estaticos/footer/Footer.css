@@ -1,10 +1,12 @@
 .box1{
-    background-color: #b6eae9;
-    height: 120px;
-    color: white;
+    background-image: url(https://i.imgur.com/N7EDhjF.jpg) !important;
+    opacity:0.6;
+    height: 80px;
+    color: white !important;
 }
 .box2{
-    background-color:#b6eae9 ;
+    background-image: url(https://i.imgur.com/N7EDhjF.jpg)!important;
+    opacity:0.6;
     height: 60px;
 }
 .redes{
@@ -12,10 +14,10 @@
     color:white;
 }
 .textos{
-    color: white;
-    text-decoration: none
+    color: white !important;
+    
 }
 .link{
-    color: white;
-    text-decoration: none
+    text-decoration: none;
 }
+
