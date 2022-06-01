@@ -1,4 +1,4 @@
-    interface Usuario {
+    interface User {
     id:      number;
     nome:    string;
     usuario: string;
@@ -6,4 +6,4 @@
     foto:    string;
 }
 
-    export default Usuario;
+    export default User;

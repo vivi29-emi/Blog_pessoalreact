@@ -1,6 +1,6 @@
 
 // Armazenamento dos dados ou atributos que estão no banco de dados e no back.
-interface UsuarioLogin {
+interface UserLogin {
     id: number;
     nome: string;
     usuario: string;
@@ -10,4 +10,4 @@ interface UsuarioLogin {
 
 }
 
-export default UsuarioLogin;
+export default UserLogin;
