@@ -1,0 +1,14 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+.btnAtual{
+    background-color: coral !important;
+}
+.btnDel{
+    background-color: khaki !important;
+}
+
+.cards{
+    box-shadow: 0 5px 10px rgb(253,190,29);
+    
+}

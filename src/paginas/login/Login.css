@@ -1,5 +1,7 @@
+
+
 .texto{
-    font-weight: bold !important;
+    font-weight: bold !important;   
 }
 .imagem{
  background-image:url(https://i.imgur.com/Qc1haAt.jpg);
@@ -8,11 +10,28 @@
  min-height: 100vh;
  background-size: cover;
  background-position: center;
+ 
 }
+.cxLogin:root {
+  --white-glass: #ffffff80 !important;
+  
+}
+.cxLogin{
+  
+  padding: 25px;
+  width: 309px;
+  margin-left: 10%;
+
+  border-radius: 10px; 
+  border: 2px ; 
+  box-shadow: 0 5px 10px rgb(253,190,29); 
+  
+}
+
 .botao{
  background-color: rgb(253,190,29);
  
 }
 .text-decoration{
-    text-decoration: none;
+    text-decoration: none;  
 }
