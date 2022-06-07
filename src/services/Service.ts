@@ -7,7 +7,7 @@ export const api = axios.create ({
     baseURL: "https://growcropssz.herokuapp.com/"
 })
 
-// métodos que fazem a requisição dentro da api
+// * métodos que fazem a requisição dentro da api
     export const cadastroUsuario = async (url:any,dados:any,setDados:any) =>{ //<-- metodo asyncrono pois o front irá aguarde(await) o back fazer todas as validações, parametros url = base url e o caminho para acessa ex /usuario/cadastrarusuario e o Dados = recebe todos os atributos inserido no back, setDado= recebe a respota da api contendo os dados do usuario
     const resposta = await api.post(url,dados)// <-- acionando o método post passando dois parametros 
     setDados(resposta.data)
@@ -17,4 +17,31 @@ export const api = axios.create ({
     const resposta = await api.post(url,dados)
     setDados(resposta.data.token)// <-- recebe os dados da resposta sendo dentro da caixa data receberá somente o token do usuário
     }
+    // * Métordo que irá retornar uma lista de postagens e temas
+    export const busca = async (url:any,setDados:any,header:any) =>{ // <-- token 
+        const resposta = await api.get(url,header)// <-- os dados que api retornar vai ser harmazendo na variavel resposta
+        setDados(resposta.data) // <-- os dados retornado serão harmazenados dentro do setDados que será atribuido no front.
+        }
+        export const buscaId = async(url:any, setDados:any, header:any) =>{
+            const resposta = await api.get(url,header)
+            setDados(resposta.data)
+        }
+        export const post = async(url:any, dados:any, setDados:any, header:any) =>{
+            const resposta = await api.post(url,dados,header)
+            setDados(resposta.data)
+        }
+        export const put = async(url:any, dados:any, setDados:any, header:any) =>{
+            const resposta = await api.put(url,dados,header)
+            setDados(resposta.data)
+        }
+        
+        export const deleteId = async(url:any, header:any) =>{
+            await api.delete(url,header)
+            
+        }
+
+
+
+
+    
 
