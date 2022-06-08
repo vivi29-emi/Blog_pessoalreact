@@ -34,17 +34,23 @@ function DeletarTema() {
     })
   }
 
- function sim(){
-   navigate('/temas')
-   deleteId(`/tema/${id}`,{
-   headers:{
-     'Authorization':token
+  async function sim() {
+    navigate('/temas')
 
-   }
-  });
-  alert('Tema deletado com sucesso')
- }
+    try {
+        await deleteId(`/temas/${id}`, {
+            headers: {
+                'Authorization': token
+            }
+        });
+        
+        alert('Tema deletado com sucesso');
+        
+    } catch (error) {
+        alert('Erro ao deletar');
+    }
 
+}
  function nao (){
    navigate('/temas')
  }

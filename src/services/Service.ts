@@ -17,24 +17,28 @@ export const api = axios.create ({
     const resposta = await api.post(url,dados)
     setDados(resposta.data.token)// <-- recebe os dados da resposta sendo dentro da caixa data receberá somente o token do usuário
     }
-    // * Métordo que irá retornar uma lista de postagens e temas
-    export const busca = async (url:any,setDados:any,header:any) =>{ // <-- token 
-        const resposta = await api.get(url,header)// <-- os dados que api retornar vai ser harmazendo na variavel resposta
-        setDados(resposta.data) // <-- os dados retornado serão harmazenados dentro do setDados que será atribuido no front.
+    //* Busca todos os dados
+    export const busca = async (url:any,setDados:any,header:any) =>{ 
+        const resposta = await api.get(url,header)
+        setDados(resposta.data) 
         }
+        // Busca todos temas e postagens pelo id
         export const buscaId = async(url:any, setDados:any, header:any) =>{
             const resposta = await api.get(url,header)
             setDados(resposta.data)
         }
+        //Cadastra as postagens e temas
         export const post = async(url:any, dados:any, setDados:any, header:any) =>{
             const resposta = await api.post(url,dados,header)
             setDados(resposta.data)
         }
+
+        //Atualiza todos os temas e postagens
         export const put = async(url:any, dados:any, setDados:any, header:any) =>{
             const resposta = await api.put(url,dados,header)
             setDados(resposta.data)
         }
-        
+        // deleta todas as postagens e temas
         export const deleteId = async(url:any, header:any) =>{
             await api.delete(url,header)
             
