@@ -1,8 +1,9 @@
 import React, { useState, ChangeEvent,useEffect} from 'react';
 import { Grid, Box, Typography, TextField, Button} from '@material-ui/core';
 import { Link,useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import {login} from '../../services/Service';
+import { addToken } from '../../store/tokens/actions';
+import { useDispatch } from 'react-redux';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 
@@ -10,9 +11,8 @@ import './Login.css';
 function Login() {
 
     let navigate = useNavigate();//função utilizada para controlar a navegação da pessoa usuária dentro do site.
-    
-
-    const [token,setToken]= useLocalStorage('token');// processo que faz o controle do token dentro do localStorage.
+    const dispatch = useDispatch();
+    const [token,setToken]= useState('');// processo que faz o controle do token dentro do localStorage.
 // Inicializando um estado o componete por meio do UseState.
     const [userLogin, setUserLogin] = useState<UserLogin>(//useState componente dos hooks responsável por fazer o controle de um componente desde a inicialização e a redenrização adicionando um estado a um componete funcional
         {
@@ -34,6 +34,7 @@ function Login() {
 //Executa funções sempre que uma de sua variáveis de dependência sofrer uma alteração
     useEffect(() =>{
         if(token!= ''){
+            dispatch(addToken(token));
             navigate('/home')
         }
     },[token])

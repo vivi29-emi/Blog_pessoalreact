@@ -2,15 +2,18 @@ import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroTema.css';
-import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function CadastroTema() {
     let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
     const [tema, setTema] = useState<Tema>({
         id: 0,
         descricao: ''
@@ -49,46 +52,25 @@ function CadastroTema() {
         
         async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
             e.preventDefault()
+            console.log("tema " + JSON.stringify(tema))
     
-            // Se o ID for diferente de indefinido tente Atualizar
             if (id !== undefined) {
-    
-                // TRY: Tenta executar a atualização 
-                try {
-                    await put(`/temas`, tema, setTema, {
-                        headers: {
-                            'Authorization': token
-                        }
-                    })
-    
-                    alert('Tema atualizado com sucesso');
-    
-                // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
-                } catch (error) {
-                    console.log(`Error: ${error}`)
-                    alert("Erro, por favor verifique a quantidade minima de caracteres")
-                }
-    
-            // Se o ID for indefinido, tente Cadastrar
+                console.log(tema)
+                put(`/tema`, tema, setTema, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+                alert('Tema atualizado com sucesso');
             } else {
-    
-                // TRY: Tenta executar o cadastro
-                try {
-                    await post(`/temas`, tema, setTema, {
-                        headers: {
-                            'Authorization': token
-                        }
-                    })
-                    
-                    alert('Tema cadastrado com sucesso');
-                
-                // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
-                } catch (error) {
-                    console.log(`Error: ${error}`)
-                    alert("Erro, por favor verifique a quantidade minima de caracteres")
-                }
+                post(`/tema`, tema, setTema, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+                alert('Tema cadastrado com sucesso');
             }
-            
+            back()
     
         }
     
@@ -99,7 +81,7 @@ function CadastroTema() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criar tema</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
