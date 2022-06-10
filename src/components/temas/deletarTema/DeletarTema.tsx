@@ -7,6 +7,7 @@ import { buscaId, deleteId } from '../../../services/Service';
 import Tema from '../../../models/Tema';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify'
 
 
 function DeletarTema() {
@@ -38,20 +39,40 @@ function DeletarTema() {
     })
   }
 
-  async function sim() {
+  function sim() {
     navigate('/temas')
 
     try {
-        await deleteId(`/temas/${id}`, {
+        deleteId(`/temas/${id}`, {
             headers: {
                 'Authorization': token
             }
         });
+
+        toast.success('Tema deletado com sucesso',{
+          position:"top-right",
+          autoClose:2000,
+          hideProgressBar:false,
+          closeOnClick:true,
+          pauseOnHover:false,
+          draggable:false,
+          theme:'colored',
+          progress:undefined,
+        })
         
-        alert('Tema deletado com sucesso');
         
     } catch (error) {
-        alert('Erro ao deletar');
+
+      toast.error('Tema deletado com sucesso',{
+        position:"top-right",
+        autoClose:2000,
+        hideProgressBar:false,
+        closeOnClick:true,
+        pauseOnHover:false,
+        draggable:false,
+        theme:'colored',
+        progress:undefined,
+      })
     }
 
 }
