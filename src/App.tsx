@@ -22,30 +22,44 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <Provider store={store}> {/*Componente que irá permitir  que todos os demais componentes que estão dentro dele  tenha acesso ao store */}
-    <ToastContainer/>
-    <Router>{/*Da o acesso a todas as rotas dentro do site */}
-      <Navbar /> {/*Menu */}
-      <div style={{ minHeight: '100vh' }}>
-        <Routes> {/*Antigo Switch, faz a verificação e o acesso a todas as rotas dentro da URL do site */}
-          <Route path="/" element={<Login />} /> {/* faz o acesso a uma rota específica dentro da URL, nesse exemplo para o usuario acessar diretamente o login ou a tela de entrada do site*/}
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-           <Route path="/cadastroUsuario" element={<CadastroUsuario/>}/>
-           <Route path="/posts" element={<ListaPostagem/>}/>
-           <Route path="/formularioPostagem" element={<CadastroPost/>}/> 
-           <Route path="/formularioPostagem/:id" element={<CadastroPost/>}/>
-           <Route path="/deletarPostagem/:id" element={<DeletarPostagem/>}/>
-           <Route path="/temas" element={<ListaTema/>}/>
-           <Route path="/formularioTema" element={<CadastroTema/>}/>
-           <Route path="/formularioTema/:id" element={<CadastroTema/>}/>
-           <Route path="/deletarTema/:id" element={<DeletarTema/>}/>
-           
-           </Routes>
-      </div>
-      <Footer /> {/*Rodapé*/}
-    </Router>
-    </Provider>
+    <Provider store={store}>
+    <ToastContainer />
+    <Router>
+    <Navbar />
+    <div style={{ minHeight: '100vh' }}>
+      <Routes>
+
+        <Route path="/" element={<Login />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/home" element={<Home />} />
+
+        <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+
+        <Route path="/temas" element={<ListaTema />} />
+
+        <Route path="/posts" element={<ListaPostagem />} />
+
+        <Route path="/formularioPostagem" element={<CadastroPost />} />
+
+        <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
+
+        <Route path="/formularioTema" element={<CadastroTema />} />
+
+        <Route path="/formularioTema/:id" element={<CadastroTema />} />
+
+        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+
+        <Route path="/deletarTema/:id" element={<DeletarTema />} />
+
+
+      </Routes>
+    </div>
+    <Footer />
+
+  </Router>
+  </Provider>
   )
 }
 

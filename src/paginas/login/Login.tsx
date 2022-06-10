@@ -45,7 +45,7 @@ function Login() {
         try{
             await login(`/usuarios/logar`, userLogin, setToken)// Direciona a rota dentro de login
             
-            toast.success('Usuário cadastrado com sucesso !', {
+            toast.success('Usuário cadastrado com sucesso ', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,

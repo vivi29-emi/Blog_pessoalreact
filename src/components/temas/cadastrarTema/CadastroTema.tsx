@@ -1,6 +1,6 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
-import {useNavigate, useParams } from 'react-router-dom'
+import {useNavigate, useParams,Link } from 'react-router-dom'
 import './CadastroTema.css';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
@@ -83,9 +83,14 @@ function CadastroTema() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary" className='btnFinalizar'>
                     Finalizar
                 </Button>
+                <Link to='/temas' className='text-decorator-none'>
+                                <Button variant='contained' color='secondary' >
+                                    Cancelar
+                                </Button>
+                            </Link>
             </form>
         </Container>
     )

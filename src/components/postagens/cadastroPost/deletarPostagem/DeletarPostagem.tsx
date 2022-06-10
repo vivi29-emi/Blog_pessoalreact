@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Typography, Button, Box, Card, CardActions, CardContent } from "@material-ui/core"
 import './DeletarPostagem.css';
-
-
 import { useNavigate, useParams } from 'react-router-dom';
 import Postagem from '../../../../models/Postagem';
 import { buscaId, deleteId } from '../../../../services/Service';
@@ -72,7 +70,7 @@ function sim(){
 
   }
  });
- toast.success('Tema deletado com sucesso',{
+ toast.success('Postagem deletada com sucesso',{
   position:"top-right",
   autoClose:2000,
   hideProgressBar:false,
