@@ -4,11 +4,14 @@ import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import {toast} from 'react-toastify';
 import './CadastroUsuario.css';
+import { useDispatch } from 'react-redux';
 
 function CadastroUsuario() {
 
     let navigate = useNavigate();
+    const dispatch = useDispatch();
     const [confirmarSenha,setConfirmarSenha] = useState<String>("")
     const [user, setUser] = useState<User>(
         {
@@ -55,21 +58,50 @@ function CadastroUsuario() {
 
                 //Tenta executar o cadastro
                 try {
+
                     await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                    alert("Usuário cadastrado com sucesso")
+                    toast.success('Usuário cadastrado com sucesso', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                    });
+                    
     
                 //Se houver erro, pegue o Erro e retorna uma msg
                 } catch (error) {
                     console.log(`Error: ${error}`)
                     
-                    //Pode modificar a msg de acordo com o erro 
-                    alert("Usuário já existente")
+                   toast.success('Usuário já existente', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                    });
+                   
                 }
     
             } else {
-                alert("Insira no miníno 8 caracteres na senha.")
+
+                toast.error('Insira no miníno 8 caracteres na senha.', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });
                 
-    
                 setUser({ ...user, senha: "" }) // Reinicia o campo de Senha
                 setConfirmarSenha("")           // Reinicia o campo de Confirmar Senha
             }
