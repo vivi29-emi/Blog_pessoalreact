@@ -11,10 +11,11 @@ function Footer() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
-
+      
+      // Componente que oculta o footer da pagina inicial e fica disponível somente se for mudado o status do token
       var footerComponent;
    
-      if(token != ''){
+      if(token != ''){ 
 
         footerComponent=
         <Grid container direction="row" justifyContent="center" alignItems="center">
