@@ -70,7 +70,7 @@ function sim(){
 
   }
  });
- toast.success('Postagem deletada com sucesso',{
+ toast.success('Postagem deletada com sucesso !',{
   position:"top-right",
   autoClose:2000,
   hideProgressBar:false,
