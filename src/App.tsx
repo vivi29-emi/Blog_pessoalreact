@@ -14,6 +14,8 @@ import DeletarPostagem from './components/postagens/cadastroPost/deletarPostagem
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -21,6 +23,7 @@ import store from './store/store';
 function App() {
   return (
     <Provider store={store}> {/*Componente que irá permitir  que todos os demais componentes que estão dentro dele  tenha acesso ao store */}
+    <ToastContainer/>
     <Router>{/*Da o acesso a todas as rotas dentro do site */}
       <Navbar /> {/*Menu */}
       <div style={{ minHeight: '100vh' }}>
@@ -29,18 +32,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
            <Route path="/cadastroUsuario" element={<CadastroUsuario/>}/>
-           <Route path="/temas" element={<ListaTema/>}/>
            <Route path="/posts" element={<ListaPostagem/>}/>
            <Route path="/formularioPostagem" element={<CadastroPost/>}/> 
            <Route path="/formularioPostagem/:id" element={<CadastroPost/>}/>
-           <Route path="/formularioTema" element={<CadastroTema/>}/>
-           <Route path="/formularioTema/:tema" element={<CadastroTema/>}/>
            <Route path="/deletarPostagem/:id" element={<DeletarPostagem/>}/>
-           <Route path="/deletarPostagem/:tema" element={<DeletarTema/>}/>
-
-
-
-        </Routes>
+           <Route path="/temas" element={<ListaTema/>}/>
+           <Route path="/formularioTema" element={<CadastroTema/>}/>
+           <Route path="/formularioTema/:id" element={<CadastroTema/>}/>
+           <Route path="/deletarTema/:id" element={<DeletarTema/>}/>
+           
+           </Routes>
       </div>
       <Footer /> {/*Rodapé*/}
     </Router>
