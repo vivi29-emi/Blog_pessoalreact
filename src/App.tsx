@@ -35,9 +35,7 @@ function App() {
 
         <Route path="/home" element={<Home />} />
 
-        <Route path="/cadastrousuario" element={<CadastroUsuario />} />
-
-        <Route path="/temas" element={<ListaTema />} />
+        <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
 
         <Route path="/posts" element={<ListaPostagem />} />
 
@@ -45,11 +43,13 @@ function App() {
 
         <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
 
+        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+
+        <Route path="/temas" element={<ListaTema />} />
+
         <Route path="/formularioTema" element={<CadastroTema />} />
 
         <Route path="/formularioTema/:id" element={<CadastroTema />} />
-
-        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
         <Route path="/deletarTema/:id" element={<DeletarTema />} />
 
