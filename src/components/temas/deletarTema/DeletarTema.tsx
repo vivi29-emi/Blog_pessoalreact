@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import {Box, Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
+import {Box, Card, CardActions, CardContent, Button, Typography,Grid} from '@material-ui/core';
 import './DeletarTema.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
@@ -62,7 +62,7 @@ function DeletarTema() {
         
     } catch (error) {
 
-      toast.error('Tema deletado com sucesso',{
+      toast.error('Erro ao deletar tema',{
         position:"top-right",
         autoClose:2000,
         hideProgressBar:false,
@@ -83,8 +83,9 @@ function DeletarTema() {
           
   return (
     <>
+    <Grid container className='primGd'>
       <Box m={2}>
-        <Card variant="outlined">
+        <Card variant="outlined" className='card_delet'>
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
@@ -98,12 +99,12 @@ function DeletarTema() {
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="btnDel"  size='large' color="primary">
                   Sim
                 </Button>
               </Box>
               <Box mx={2}>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                <Button onClick={nao} variant="contained" size='large' color="secondary" className='btnAtual'>
                   Não
                 </Button>
               </Box>
@@ -111,6 +112,7 @@ function DeletarTema() {
           </CardActions>
         </Card>
       </Box>
+      </Grid>
     </>
   );
 }

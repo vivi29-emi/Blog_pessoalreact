@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid} from "@material-ui/core"
 import {useNavigate, useParams,Link } from 'react-router-dom'
 import './CadastroTema.css';
 import Tema from '../../../models/Tema';
@@ -46,7 +46,7 @@ function CadastroTema() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/tema/${id}`, setTema, {
+        buscaId(`/temas/${id}`, setTema, {
             headers: {
               'Authorization': token
             }
@@ -68,7 +68,7 @@ function CadastroTema() {
     
             if (id !== undefined) {
                 console.log(tema)
-                put(`/tema`, tema, setTema, {
+                put(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
@@ -85,7 +85,7 @@ function CadastroTema() {
                 })
                 
             } else {
-                post(`/tema`, tema, setTema, {
+                post(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
@@ -112,20 +112,23 @@ function CadastroTema() {
         }
   
     return (
-        <Container maxWidth="sm" className="topo">
+        <Grid container className='primGd'>
+        <Container maxWidth="sm" className="cardtem">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
+            <Typography variant="h3" color="textSecondary" component="h1" align="center" className='Titulo' > Cadastro tema</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary" className='btnFinalizar'>
-                    Finalizar
+
+                <Button type="submit" variant="contained" className='btnAtual' >
+                    Cadastrar
                 </Button>
                 <Link to='/temas' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' >
+                                <Button variant='contained' color='secondary' className='btnDel'>
                                     Cancelar
                                 </Button>
                             </Link>
             </form>
         </Container>
+        </Grid>
     )
 }
 

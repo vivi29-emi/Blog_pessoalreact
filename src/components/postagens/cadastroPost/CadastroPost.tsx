@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText,Grid } from "@material-ui/core"
 import './CadastroPost.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
@@ -8,6 +8,8 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import {toast} from 'react-toastify';
+
+
 
 function CadastroPost() {
     let Navigate = useNavigate();
@@ -46,7 +48,9 @@ function CadastroPost() {
         id: 0,
         titulo: '',
         texto: '',
-        dados: '',
+        curtir: 0,
+        data: '',
+        midia: '',
         tema: null
     })
 
@@ -143,11 +147,14 @@ function CadastroPost() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Grid container className='primGd'>
+        <Container maxWidth="sm" className="topo" >
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className='Titulo'>   Cadastro postagem </Typography>
+                <TextField value={postagem.midia} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="midia" label="Mídia" name="midia" variant="outlined" margin="normal" className='subtitulo' placeholder='Insira aqui o link da imagem' />
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" className='subtitulo'  fullWidth />
+                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" className='subtitulo'  fullWidth />
+                
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
@@ -166,12 +173,13 @@ function CadastroPost() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
-                        Finalizar
+                    <Button type="submit" variant="contained" color="primary" className='btnAtual'>
+                        Cadastrar
                     </Button>
                 </FormControl>
             </form>
         </Container>
+        </Grid>
     )
 }
 export default CadastroPost;

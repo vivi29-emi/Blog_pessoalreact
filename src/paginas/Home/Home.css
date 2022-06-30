@@ -1,21 +1,140 @@
-.caixa{
-    background-image: url(https://i.imgur.com/N7EDhjF.jpg);
-        
+.primGrid{
+    
+    background-image: url("https://i.imgur.com/hZjCiGZ.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 100vh; 
 }
-.titulo{
-    color:white !important;
-    font-weight:bold!important;
-}
-.botao{
-    border-color:white!important;
-    background-color:rgb(253,190,29)!important;
-    color:white!important;
-}
-.postagens{
-    background-color:white!important;
-}
-.text-decorator{
-    text-decoration:none;
+.btnsobre{
+  
+    width: 130px;
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+           7px 7px 20px 0px rgba(0, 0, 0, .1),
+           4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+   }
+   
+   .btnsobre{
+    background: linear-gradient(0deg, #6db1947f 0%, #6db194fe 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+   }
+   
+   .btnsobre span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+   }
+   
+   .btnsobre:before,
+   .btnsobre:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #18e58cfe ;
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+           -4px -4px 5px 0px rgba(255, 255, 255, .9),
+           7px 7px 20px 0px rgba(0, 0, 0, .2),
+           4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+   }
+   
+   .btnsobre:before {
+    height: 0%;
+    width: 2px;
+   }
+   
+   .btnsobre:after {
+    width: 0%;
+    height: 2px;
+   }
+   
+   .btnsobre:hover {
+    color: #18e58cfe ;
+    background: transparent;
+   }
+   
+   .btnsobre:hover:before {
+    height: 100%;
+   }
+   
+   .btnsobre:hover:after {
+    width: 100%;
+   }
+   
+   .btnsobre span:before,
+   .btnsobre span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #18e58cfe ;
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+           -4px -4px 5px 0px rgba(255, 255, 255, .9),
+           7px 7px 20px 0px rgba(0, 0, 0, .2),
+           4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+   }
+   
+   .btnsobre span:before {
+    width: 2px;
+    height: 0%;
+   }
+   
+   .btnsobre span:after {
+    height: 2px;
+    width: 0%;
+   }
+   
+   .btnsobre span:hover:before {
+    height: 100%;
+   }
+   
+   .btnsobre span:hover:after {
+    width: 100%;
+   }
 
+.tituloSobre{
+  
+  color: rgba(0, 0, 0, 0.441) !important;
+  font-family: 'EB Garamond', serif !important;
 }
+.txtSobre{
+  font-size: 20px !important;
+  color: rgba(0, 0, 0, 0.365) !important;
+  font-family: 'EB Garamond', serif !important;
+}
+.txt2{
+  font-size: 15px !important;
+  color: rgba(0, 0, 0, 0.411) !important;
+  font-family: 'EB Garamond', serif !important;
+}
+.cxText{
+  
+  background-color: #d9d9d9bd ; 
+  
+  padding: 38px; 
+  
+  margin-left: 10%; 
+  border-radius: 5px;  
+  border: 3px ;  
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.224); 
+}
+
     

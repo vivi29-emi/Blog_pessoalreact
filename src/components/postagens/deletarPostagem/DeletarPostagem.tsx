@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Typography, Button, Box, Card, CardActions, CardContent } from "@material-ui/core"
+import {Typography, Button, Box, Card, CardActions, CardContent,Grid} from "@material-ui/core"
 import './DeletarPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Postagem from '../../../models/Postagem';
@@ -89,8 +89,9 @@ function nao (){
 
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined" >
+    <Grid container className='primGd'>
+      <Box m={2}  >
+        <Card variant="outlined" className='card_delet'>
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
@@ -105,12 +106,12 @@ function nao (){
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-              <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+              <Button onClick={sim} variant="contained" className="btnDel" size='large' color="primary">
                 Sim
               </Button>
               </Box>
               <Box>
-              <Button  onClick={nao} variant="contained" size='large' color="secondary">
+              <Button  onClick={nao} variant="contained" size='large' color="secondary" className='btnAtual'>
                 Não
               </Button>
               </Box>
@@ -118,6 +119,7 @@ function nao (){
           </CardActions>
         </Card>
       </Box>
+      </Grid>
     </>
   );
 }

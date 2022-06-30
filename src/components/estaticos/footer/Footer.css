@@ -1,21 +1,21 @@
 .box1{
-    background-image: url(https://i.imgur.com/N7EDhjF.jpg) !important;
-    opacity:0.8;
+
+    background-color: rgba(0, 0, 0, 0.336) !important;
+    opacity: 0.9;
     height: 80px;
     color: white !important;
+   
+    
 }
-.box2{
-    background-image: url(https://i.imgur.com/N7EDhjF.jpg)!important;
-    opacity:0.6;
-    height: 60px;
-}
+
+
 .redes{
     font-size: 60;
     color:white;
 }
 .textos{
     color: white !important;
-    
+  
 }
 .link{
     text-decoration: none;

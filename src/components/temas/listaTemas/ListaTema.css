@@ -1,3 +1,66 @@
+.primGd{
+    background-color: #ccccc465;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    min-height: 100vh; 
+    
+}
+.cardstem {
+    background-color:  #ccccc4cc!important;
+    padding: 80px;
+    width: 280px !important ;
+    height: 180px !important ;
+    margin-left: 30%;
+    border-radius: 15px;
+    border: 3px;
+    box-shadow: 0 10px 10px #ccccc4f8;
+}
+.cxTitulo{
+
+ font-size: 20px !important;
+ font-family: 'EB Garamond', serif!important;
+ color: #6db194e1 !important ;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.btnAtual{
+    
+    padding: 1.3em 3em;
+    margin-right: 10px !important;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.352)!important;
+    background-color: rgba(255, 255, 255, 0.721) !important;
+    border: none;
+    border-radius: 10px ;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.btnDel{
+  
+  padding: 1.3em 3em;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.352)!important;
+  background-color: #d9d9d990  !important;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
 .text-decorator-none{
     text-decoration: none;
 }

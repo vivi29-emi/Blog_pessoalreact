@@ -1,7 +1,12 @@
-.topo{
+
+.cardtem{
+    
     margin-top: 20px;
-}
-.btnFinalizar{
-    margin-right: 20px !important;
-    background-color:rgba(253, 190, 29, 0.941) !important;
+    background-color:  #ccccc4cc!important;
+    padding: 50px;
+    width: 530px !important ;
+    height: 330px !important ;
+    border-radius: 15px;
+    border: 3px;
+    box-shadow: 0 10px 10px #ccccc4fe;
 }

@@ -1,14 +1,24 @@
 .cor-menu{
-    background-image: url(https://i.imgur.com/N7EDhjF.jpg);
-    opacity: 0.8;
+    background-color:  #6db194ba !important;
+    
 }
 .cursor{
     cursor:pointer;
     color:white !important;   
 }
 
+
+
 .text-decorator-none{
     text-align: none;
     text-decoration: none;
     font-weight:bold;     
+}
+
+
+.iconeMenu{
+    color: #fff!important;
+}
+.textMen{
+    color: rgba(0, 0, 0, 0.329)!important;
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import {Typography, Box, Grid, Button} from '@material-ui/core';
-import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+
 import './Home.css';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
@@ -38,28 +37,55 @@ function Home() {
   }, [token])
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+
+            <Grid container className="primGrid">
+            <Grid item xs={12}>
+            <Box display="flex" justifyContent="flex-start" alignItems="center" height="80vh">
+            <Box className="cxText" width={650} height="50vh" borderRadius={4} >
+            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='tituloSobre'> Porque GrowCrops</Typography>
+            <Typography variant="body2" component="p" className='txtSobre'>  
+                            GrowCrops é uma palavra em inglês que significa CULTIVAR,
+                            sendo assim,  usar  esse nome da para entender a importancia de cultivar aquilo
+                            que vai agregar algo de bom. Como o nome se relaciona com os cactos?
+                            Estudando sobre os cactos percebi que essa incrível planta e suas divercidades tem muito a ensinar a sociedade e
+                            no blog será explorado esses detalhes.
+                            </Typography>
+            <Typography variant="body2" component="p" className='txt2' > *Para saber mais sobre a plataforma e futuras implementações só clickar abaixo.</Typography>
+                            
+                            
+
+
+            <Link to={`/sobre`} className="text-decorator-none" >
+                    <Box mx={1} >
+                      <Button variant="contained" className="btnsobre" size='small'>
+                        Sobre
+                      </Button>
                     </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem />
-                        </Box>
-                        <Link to="/posts" className='text-decorator'>
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
-                        </Link>
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
-                </Grid>
-                <Grid xs={12} className='postagens'>
-                    <TabPostagem />
-                </Grid>
+                  </Link>
+
+            </Box>
+            </Box>
+                    
+                
+                
+
             </Grid>
+            </Grid>
+
+    
+    
+          
+        
+
+
+                   
+
+                
+                   
+                   
+            
+                
+        
         </>
     );
 }

@@ -1,20 +1,61 @@
-.imagem2{
- background-image:url(https://i.imgur.com/Qc1haAt.jpg);
- background-repeat: no-repeat;
- width: 100vh;
- min-height: 100vh;
- background-size: cover;
- background-position: center;
+.containPric{
+    background:rgba(0, 0, 0, 0.192);
 }
-.texto2{
-    font-weight: bold !important;
+.imgPrinc{
+   
+    background-image: url("https://i.imgur.com/sqD4ZZa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    min-height: 100vh ; 
+
+    /* Calc: função do CSS que faz um calculo com medidas e retorno seu resultado. No caso
+            abaixo estamos calculando a largura da tela da pessoa menos a altura do Navbar*/
+}
+.textos2{
+    color: rgba(0, 0, 0, 0.441)!important;
     
 }
+.cxInput{
+    background-color: #d9d9d9a7;
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.441)!important;
+}
 .btnCadastrar{
-    margin-right: 20px !important;
-    background-color:rgba(253, 190, 29, 0.941) !important;
+    margin-right: 50px !important;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.352)!important;
+    background-color: rgba(255, 255, 255, 0.811) !important;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
 .btnCancelar{
     
-    background-color:rgba(224, 198, 130, 0.941) !important ;
+    
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.352)!important;
+  background-color: #d9d9d947  !important;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
+  
+ 
+  

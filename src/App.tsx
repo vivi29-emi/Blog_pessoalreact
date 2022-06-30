@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/Home/Home';
+import Sobre from './paginas/sobre/Sobre';
 import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
 import './App.css';
@@ -34,6 +35,8 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/home" element={<Home />} />
+
+        <Route path="/sobre" element={<Sobre />} />
 
         <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
 

@@ -1,3 +1,23 @@
 .topo{
     margin-top: 20px;
+    background-color:  #ccccc4cc!important;
+    padding: 50px;
+    width: 530px !important ;
+    height: 530px !important ;
+    border-radius: 15px;
+    border: 3px;
+    box-shadow: 0 10px 10px #ccccc4fe;
+}
+.Titulo{
+
+ font-size: 60px;
+ font-family: 'EB Garamond', serif !important;
+ color: #6db194ba !important;
+
+}
+
+.subtitulo{
+    font-size: 20px;
+    font-family: 'EB Garamond', serif !important;
+    color: rgba(0, 0, 0, 0.276) !important;
 }

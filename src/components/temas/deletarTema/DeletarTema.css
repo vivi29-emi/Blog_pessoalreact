@@ -1,0 +1,11 @@
+.card_delet{
+    
+    margin-top: 20px;
+    background-color:  #ccccc4cc!important;
+    padding: 50px;
+    width: 280px !important ;
+    height: 180px !important ;
+    border-radius: 15px;
+    border: 3px;
+    box-shadow: 0 10px 10px #ccccc4fe;
+}

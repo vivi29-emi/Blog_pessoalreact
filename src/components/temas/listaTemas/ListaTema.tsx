@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
 import {useNavigate} from 'react-router-dom';
@@ -49,32 +49,33 @@ function ListaTema() {
 
   return (
     <>
+    <Grid container className='primGd'>
     {
       temas.map(tema =>(
       <Box m={2} >
-        <Card variant="outlined">
+        <Card variant="outlined" className='cardstem'>
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography color="textSecondary" gutterBottom className='cxTitulo'>
               Tema
             </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography  variant="body2" component="p" className='cxDescr'>
              {tema.descricao}
             </Typography>
           </CardContent>
           <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5} >
+            <Box display="flex" justifyContent="center"  mb={1.5} >
 
               <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
+                  <Button variant="contained"   className='btnAtual' >
+                    Atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
+                  <Button variant="contained"  className='btnDel' >
+                    Deletar
                   </Button>
                 </Box>
               </Link>
@@ -83,7 +84,9 @@ function ListaTema() {
         </Card>
       </Box>
       ))
-      }
+     }
+     </Grid>
+
     </>
   );
 }
