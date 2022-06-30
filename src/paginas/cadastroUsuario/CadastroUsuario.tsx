@@ -60,7 +60,7 @@ function CadastroUsuario() {
             try {
 
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                toast.error('Usuário cadastrado com sucesso', {
+                toast.success('Usuário cadastrado com sucesso', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
