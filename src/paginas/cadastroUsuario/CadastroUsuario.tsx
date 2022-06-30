@@ -19,7 +19,7 @@ function CadastroUsuario() {
             nome: '',
             usuario: '',
             senha: '',
-            foto: ''
+            
         })
 
     const [userResult, setUserResult] = useState<User>(
@@ -28,7 +28,7 @@ function CadastroUsuario() {
             nome: '',
             usuario: '',
             senha: '',
-            foto: ''
+            
         })
 
     useEffect(() => {
@@ -122,7 +122,6 @@ function CadastroUsuario() {
                 <form onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
                     <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome'placeholder='Digite o nome completo' variant='outlined' name='nome' margin='normal'className='cxInput' fullWidth />
-                    <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='foto' label='foto' placeholder='Link da foto'variant='outlined' name='foto' margin='normal'className='cxInput'fullWidth />
                     <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal'className='cxInput'fullWidth />
                     <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha'placeholder=' A senha tem que ter 8 caracter' variant='outlined' name='senha' margin='normal' type='password' className='cxInput'fullWidth />
                     <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' className='cxInput' fullWidth />
