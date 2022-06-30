@@ -28,6 +28,7 @@ function Footer() {
                 
 
                 <Box display="flex" alignItems="center" justifyContent="center" >
+                    
                     <a href="https://www.facebook.com/generationbrasil" target="_blank">
                         <FacebookIcon className='redes' />
                     </a>

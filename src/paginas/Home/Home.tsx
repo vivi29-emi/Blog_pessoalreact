@@ -44,11 +44,9 @@ function Home() {
             <Box className="cxText" width={650} height="50vh" borderRadius={4} >
             <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='tituloSobre'> Porque GrowCrops</Typography>
             <Typography variant="body2" component="p" className='txtSobre'>  
-                            GrowCrops é uma palavra em inglês que significa CULTIVAR,
-                            sendo assim,  usar  esse nome da para entender a importancia de cultivar aquilo
-                            que vai agregar algo de bom. Como o nome se relaciona com os cactos?
-                            Estudando sobre os cactos percebi que essa incrível planta e suas divercidades tem muito a ensinar a sociedade e
-                            no blog será explorado esses detalhes.
+            GrowCrops é uma palavra em inglês que significa CULTIVAR, sendo assim, 
+            usar esse nome da para entender a importância de cultivar aquilo que vai agregar algo de bom.
+            Como o nome se relaciona com os cactos? Estudando sobre os cactos percebi que essa incrível planta e suas diversidades tem muito a ensinar a sociedade e no blog será explorado esses detalhes.
                             </Typography>
             <Typography variant="body2" component="p" className='txt2' > *Para saber mais sobre a plataforma e futuras implementações só clickar abaixo.</Typography>
                             
