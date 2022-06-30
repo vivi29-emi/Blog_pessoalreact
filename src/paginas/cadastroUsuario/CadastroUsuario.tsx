@@ -60,7 +60,7 @@ function CadastroUsuario() {
             try {
 
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                toast.success('Usuário cadastrado com sucesso', {
+                toast.error('Usuário cadastrado com sucesso', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -76,7 +76,8 @@ function CadastroUsuario() {
             } catch (error) {
                 console.log(`Error: ${error}`)
 
-                toast.success('Usuário já existente', {
+                
+                toast.error('Dados incorretos, verifique os dados inseridos', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -87,11 +88,15 @@ function CadastroUsuario() {
                     progress: undefined,
                 });
 
+
+
             }
+
+            
 
         } else {
 
-            toast.error('Insira no miníno 8 caracteres na senha.', {
+            toast.error(' A senha tem que ter 8 caracter', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -119,7 +124,7 @@ function CadastroUsuario() {
                     <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome'placeholder='Digite o nome completo' variant='outlined' name='nome' margin='normal'className='cxInput' fullWidth />
                     <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='foto' label='foto' placeholder='Link da foto'variant='outlined' name='foto' margin='normal'className='cxInput'fullWidth />
                     <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal'className='cxInput'fullWidth />
-                    <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha'placeholder='Senha no mínimo 8 carácteres' variant='outlined' name='senha' margin='normal' type='password' className='cxInput'fullWidth />
+                    <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha'placeholder=' A senha tem que ter 8 caracter' variant='outlined' name='senha' margin='normal' type='password' className='cxInput'fullWidth />
                     <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' className='cxInput' fullWidth />
                     <Box marginTop={2} textAlign='center'>
                     <Button type='submit' variant='contained' color='primary'className='btnCadastrar'>
