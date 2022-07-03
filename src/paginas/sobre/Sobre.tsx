@@ -50,7 +50,7 @@ function Sobre() {
                     
                     <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='titulo'> Desenvolvedora</Typography>
                 <Typography variant="body2" component="p" className='txt'>
-                            "Não nasci apaixonada pela tecnologia, aos poucou fui me familiariando com ela.
+                            "Não nasci apaixonada pela tecnologia, aos poucou fui me familiarizando com ela.
                             Quando comecei a estudar programação pude ver quantas coisas incríveis podemos fazer com ela e alcançar.
                             Atualmente fico muito orgulhosa de ter desenvolvido do zero essa rede social com ajuda da escola Generation e por meio dessa plataforma, poder agregar valores e conhecimento com aqueles na qual se interessarem pelo assunto".
                 </Typography>
